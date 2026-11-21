@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2272,7 +2272,7 @@
 
 <h1 id="indexing-dataflow">Indexing Dataflow</h1>
 <h2 id="the-graphrag-knowledge-model">The GraphRAG Knowledge Model</h2>
-<p>The knowledge model is a specification for data outputs that conform to our data-model definition. You can find these definitions in the python/graphrag/graphrag/model folder within the GraphRAG repository. The following entity types are provided. The fields here represent the fields that are text-embedded by default.</p>
+<p>The knowledge model is a specification for data outputs that conform to our data-model definition. You can find these definitions in the <code>packages/graphrag/graphrag/data_model</code> folder within the GraphRAG repository. The following entity types are provided. The fields here represent the fields that are text-embedded by default.</p>
 <ul>
 <li><code>Document</code> - An input document into the system. These either represent individual rows in a CSV or individual .txt files.</li>
 <li><code>TextUnit</code> - A chunk of text to analyze. The size of these chunks, their overlap, and whether they adhere to any data boundaries may be configured below.</li>
@@ -2317,8 +2317,8 @@ flowchart TB
     community_report_outputs --&gt; content_embed[Content Embedding]
     end</code></pre>
 <h2 id="phase-1-compose-textunits">Phase 1: Compose TextUnits</h2>
-<p>The first phase of the default-configuration workflow is to transform input documents into <em>TextUnits</em>. A <em>TextUnit</em> is a chunk of text that is used for our graph extraction techniques. They are also used as source-references by extracted knowledge items in order to empower breadcrumbs and provenance by concepts back to their original source text.</p>
-<p>The chunk size (counted in tokens), is user-configurable. By default this is set to 1200 tokens. Larger chunks result in lower-fidelity output and less meaningful reference texts; however, using larger chunks can result in much faster processing time.</p>
+<p>The first phase of the default-configuration workflow is to transform input documents into <em>TextUnits</em>. A <em>TextUnit</em> is a chunk of text used by our graph extraction techniques. TextUnits are also referenced by extracted knowledge items, providing provenance back to the original source text.</p>
+<p>The chunk size (counted in tokens) is user-configurable. By default, it is set to 1200 tokens. Larger chunks result in lower-fidelity output and less meaningful reference texts; however, they can result in much faster processing.</p>
 <pre class="mermaid"><code>---
 title: Documents into Text Chunks
 ---
@@ -2490,7 +2490,7 @@ flowchart LR
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select", "navigation.footer", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../scripts/create_cookie_banner.js"></script>
       

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1978,14 +1978,14 @@ This allows our indexer to be more resilient to network issues, to act idempoten
 <p>The following subsystems use a factory pattern that allows you to register your own implementations:</p>
 <ul>
 <li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag-llm/graphrag_llm/completion/completion_factory.py">language model</a> - implement your own <code>chat</code> and <code>embed</code> methods to use a model provider of choice beyond the built-in LiteLLM wrapper</li>
-<li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag-input/graphrag_input/input_reader.py">input reader</a> - implement your own input document reader to support file types other than text, CSV, and JSON</li>
+<li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag-input/graphrag_input/input_reader.py">input reader</a> - implement your own input document reader to support file types other than the built-in text, CSV, JSON, JSONL, Parquet, and MarkItDown readers</li>
 <li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag-cache/graphrag_cache/cache_factory.py">cache</a> - create your own cache storage location in addition to the file, blob, and CosmosDB ones we provide</li>
 <li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag/graphrag/logger/factory.py">logger</a> - create your own log writing location in addition to the built-in file and blob storage</li>
 <li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag-storage/graphrag_storage/tables/table_provider_factory.py">storage</a> - create your own storage provider (database, etc.) beyond the file, blob, and CosmosDB ones built in</li>
 <li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag-vectors/graphrag_vectors/vector_store_factory.py">vector store</a> - implement your own vector store other than the built-in lancedb, Azure AI Search, and CosmosDB ones built in</li>
 <li><a href="https://github.com/microsoft/graphrag/blob/main/packages/graphrag/graphrag/index/workflows/factory.py">pipeline + workflows</a> - implement your own workflow steps with a custom <code>run_workflow</code> function, or register an entire pipeline (list of named workflows)</li>
 </ul>
-<p>The links for each of these subsystems point to the source code of the factory, which includes registration of the default built-in implementations. In addition, we have a detailed discussion of <a href="../../config/models/">language models</a>, which includes and example of a custom provider, and a <a href="../examples_notebooks/custom_vector_store.ipynb">sample notebook</a> that demonstrates a custom vector store.</p>
+<p>The links for each of these subsystems point to the source code of the factory, which includes registration of the default built-in implementations. In addition, we have a detailed discussion of <a href="../../config/models/">language models</a>, which includes an example of a custom provider, and a <a href="../../packages/graphrag-vectors/example_notebooks/custom_vector_store.ipynb">sample notebook</a> that demonstrates a custom vector store.</p>
 <p>All of these factories allow you to register an impl using any string name you would like, even overriding built-in ones directly.</p>
 
 
@@ -2084,7 +2084,7 @@ This allows our indexer to be more resilient to network issues, to act idempoten
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.select", "navigation.footer", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../scripts/create_cookie_banner.js"></script>
       
